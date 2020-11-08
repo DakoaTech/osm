@@ -693,5 +693,9 @@ else{
 		$output .= 'osm_addMouseHover(' . $MapName . '); ';
 
 		$output .= '</script>';
+
+		// TODO-DT: HACK to avoid added <p>'s that lead to a syntax error
+		$output = str_replace("\n", "", $output);
+
 }
 ?>
